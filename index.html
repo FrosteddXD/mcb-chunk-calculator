@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Chunk Border Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Minecraft Chunk Border Calculator</h1>
+        <form id="chunkForm">
+            <div class="form-group">
+                <label for="xCoord">Player X Coordinate:</label>
+                <input type="text" id="xCoord" placeholder="Enter X coordinate" required>
+            </div>
+            <div class="form-group">
+                <label for="yCoord">Player Y Coordinate:</label>
+                <input type="text" id="yCoord" placeholder="Enter Y coordinate" required>
+            </div>
+            <div class="form-group">
+                <label for="zCoord">Player Z Coordinate:</label>
+                <input type="text" id="zCoord" placeholder="Enter Z coordinate" required>
+            </div>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="output">
+            <h2>Chunk Information</h2>
+            <p class="subtitle">This is each corner of the chunk border</p>
+            <table id="chunkTable">
+                <thead>
+                    <tr>
+                        <th>Border</th>
+                        <th>X Coordinate</th>
+                        <th>Z Coordinate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>North</td>
+                        <td><input type="text" id="northX" readonly></td>
+                        <td><input type="text" id="northZ" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>South</td>
+                        <td><input type="text" id="southX" readonly></td>
+                        <td><input type="text" id="southZ" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>West</td>
+                        <td><input type="text" id="westX" readonly></td>
+                        <td><input type="text" id="westZ" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>East</td>
+                        <td><input type="text" id="eastX" readonly></td>
+                        <td><input type="text" id="eastZ" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>Center</td>
+                        <td><input type="text" id="centerX" readonly></td>
+                        <td><input type="text" id="centerZ" readonly></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Chunk Highlighter Command</h3>
+            <p class="subtitle">This command automatically places blocks where the designated chunk is for a quicker way of locating the chunk.</p>
+            <textarea id="command" readonly></textarea>
+        </div>
+    </div>
+    <footer>
+        <p>This Website is Developed and Owned by <a href="https://frosteddxd.carrd.co/" target="_blank">FrosteddXD</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
